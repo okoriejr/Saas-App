@@ -1,7 +1,7 @@
 {
-  "name": "quiz web app",
+  "name": "saas app",
   "version": "1.0.0",
-  "description": "Quiz web application using an api",
+  "description": "saas app",
   "main": "index.html",
   "scripts": {
     "start": "http-server -p $PORT"
