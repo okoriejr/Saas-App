@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Health Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Patient Dashboard</h1>
+    </header>
+    
+    <section class="search-section">
+      <input type="text" class="search-input" placeholder="Search for patients, records, or health metrics..."/>
+      <button class="search-btn">Search</button>
+    </section>
+    
+    <section class="controls">
+      <!-- Patient Status -->
+      <div class="control-group">
+        <label for="status">Patient Status</label>
+        <select id="status" class="control-select">
+          <option value="">All</option>
+          <option value="active">Active Patients</option>
+          <option value="pending">Pending Checkups</option>
+          <option value="archived">Archived Records</option>
+        </select>
+      </div>
+      
+      <!-- Medical Specialty -->
+      <div class="control-group">
+        <label for="category">Medical Specialty</label>
+        <select id="category" class="control-select">
+          <option value="">All</option>
+          <option value="cardiology">Cardiology</option>
+          <option value="neurology">Neurology</option>
+          <option value="general">General Health</option>
+        </select>
+      </div>
+      
+      <!-- Date Range -->
+      <div class="control-group">
+        <label>Date Range</label>
+        <div class="date-range">
+          <input type="date" id="date-start" class="date-input" placeholder="From"/>
+          <span class="dash">to</span>
+          <input type="date" id="date-end" class="date-input" placeholder="To"/>
+        </div>
+      </div>
+      
+      <!-- Tags -->
+      <div class="control-group tags">
+        <label>Tags</label>
+        <div class="tag-options">
+          <label class="tag-label"><input type="checkbox" value="urgent" />Urgent</label>
+          <label class="tag-label"><input type="checkbox" value="medication" />Medication</label>
+          <label class="tag-label"><input type="checkbox" value="diagnosed" />Diagnosed</label>
+          <label class="tag-label"><input type="checkbox" value="follow-up" />Follow-up</label>
+        </div>
+      </div>
+      
+      <!-- Button -->
+      <button class="apply-btn">Apply</button>
+    </section>
+    
+    <!-- Results Section -->
+    <section class="results">
+      <div class="card" data-status="active" data-category="cardiology" data-tags='["urgent","medication"]'>
+        <h3>Patient A</h3>
+        <p>Status: Active</p>
+        <p>Specialty: Cardiology</p>
+        <p>Tags: Urgent, Medication</p>
+      </div>
+      <div class="card" data-status="pending" data-category="neurology" data-tags='["diagnosed","follow-up"]'>
+        <h3>Patient B</h3>
+        <p>Status: Pending Checkup</p>
+        <p>Specialty: Neurology</p>
+        <p>Tags: Diagnosed, Follow-up</p>
+      </div>
+      <div class="card" data-status="archived" data-category="general" data-tags='["urgent"]'>
+        <h3>Patient C</h3>
+        <p>Status: Archived</p>
+        <p>Specialty: General Health</p>
+        <p>Tags: Urgent</p>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
